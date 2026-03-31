@@ -1,5 +1,7 @@
 # Claude Code (Leaked Source Archive)
 
+English | [中文](./README_ZH.md) | [日本語](./README_JA.md) | [Español](./README_ES.md)
+
 <p align="center">
   <img src="https://img.shields.io/badge/status-archived%20%2B%20rebuilding-blue" />
   <img src="https://img.shields.io/badge/runtime-Bun%20%2F%20Node-black" />

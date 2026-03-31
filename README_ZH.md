@@ -1,6 +1,6 @@
 # Claude Code（泄露源码归档）
 
-[English](./README.md) | 中文 | [日本語](./README_JA.md) | [Español](./README_ES.md)
+[English](./README.md) | 中文 | [繁體中文](./README_ZH_TW.md) | [조선어](./README_KO.md) | [日本語](./README_JA.md) | [Español](./README_ES.md) | [Русский](./README_RU.md)
 
 <p align="center">
   <img src="https://img.shields.io/badge/status-archived%20%2B%20rebuilding-blue" />

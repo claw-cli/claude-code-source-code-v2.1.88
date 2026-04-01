@@ -23,6 +23,10 @@ https://github.com/claw-cli/claw-code-cli
 
 ---
 
+## 🚨 UPDATE → Now can `npm start build`
+
+> from : https://github.com/Ta0ing/claude-code_evil
+
 ## 📦 What is this repo?
 
 This repository is an **archived snapshot of Claude Code v2.1.88 source code**, which became publicly accessible via a sourcemap bundled in the npm package.

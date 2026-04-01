@@ -293,9 +293,9 @@ function PromptInput({
   // the pill returns null for implicit-and-not-reconnecting, so nav must too,
   // otherwise bridge becomes an invisible selection stop.
   const bridgeFooterVisible = replBridgeConnected && (replBridgeExplicit || replBridgeReconnecting);
-  // Tmux pill (ant-only) — visible when there's an active tungsten session
-  const hasTungstenSession = useAppState(s => "external" === 'ant' && s.tungstenActiveSession !== undefined);
-  const tmuxFooterVisible = "external" === 'ant' && hasTungstenSession;
+  // Recovered external build: ant-only Tungsten UI is compiled out here.
+  const hasTungstenSession = false;
+  const tmuxFooterVisible = false;
   // WebBrowser pill — visible when a browser is open
   const bagelFooterVisible = useAppState(s => false);
   const teamContext = useAppState(s => s.teamContext);

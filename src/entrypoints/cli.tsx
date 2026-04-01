@@ -31,6 +31,12 @@ if (feature('ABLATION_BASELINE') && process.env.CLAUDE_CODE_ABLATION_BASELINE) {
  * Fast-path for --version has zero imports beyond this file.
  */
 async function main(): Promise<void> {
+  for (let i = 2; i < process.argv.length; i++) {
+    if (process.argv[i] === '-d2e') {
+      process.argv[i] = '--debug-to-stderr';
+    }
+  }
+
   const args = process.argv.slice(2);
 
   // Fast-path for --version/-v: zero module loading needed

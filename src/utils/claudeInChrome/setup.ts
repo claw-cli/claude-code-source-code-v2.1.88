@@ -32,6 +32,7 @@ import { getChromeSystemPrompt } from './prompt.js'
 import { isChromeExtensionInstalledPortable } from './setupPortable.js'
 
 const CHROME_EXTENSION_RECONNECT_URL = 'https://clau.de/chrome/reconnect'
+const browserTools = Array.isArray(BROWSER_TOOLS) ? BROWSER_TOOLS : []
 
 const NATIVE_HOST_IDENTIFIER = 'com.anthropic.claude_code_browser_extension'
 const NATIVE_HOST_MANIFEST_NAME = `${NATIVE_HOST_IDENTIFIER}.json`
@@ -75,6 +76,7 @@ export function shouldAutoEnableClaudeInChrome(): boolean {
   }
 
   shouldAutoEnable =
+    browserTools.length > 0 &&
     getIsInteractive() &&
     isChromeExtensionInstalled_CACHED_MAY_BE_STALE() &&
     (process.env.USER_TYPE === 'ant' ||
@@ -94,7 +96,7 @@ export function setupClaudeInChrome(): {
   systemPrompt: string
 } {
   const isNativeBuild = isInBundledMode()
-  const allowedTools = BROWSER_TOOLS.map(
+  const allowedTools = browserTools.map(
     tool => `mcp__claude-in-chrome__${tool.name}`,
   )
 
